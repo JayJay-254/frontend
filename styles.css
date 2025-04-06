@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url('central-image/background-image.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100vw;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    color: rgb(209, 231, 7);
+}
+
+header {
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgb(8, 223, 252);
+    padding: 16px;
+    text-align: center;
+    color: rgb(255, 239, 9);
+    font-size: 50px;
+    width: 100%;
+}
+
+header h1 {
+    font: italic bold 50px/1 ;
+    font-size: 50px;
+    margin: 0;
+    padding: 0;
+    color: rgb(7, 7, 7);
+}
+
+p {
+    color: red;
+    font-style: italic;
+    padding: 0px;
+    margin: 5px 0px;
+    font-size: 10px;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    margin: 0;
+}
+
+.menu-bar {
+    position: relative;
+    background: rgba(41, 63, 24, 0.9);
+    text-align: center;
+    padding: 15px;
+    margin-top: 5px;
+    z-index: 10; 
+    border-bottom: 2px solid rgb(255, 239, 9);
+}
+.menu-bar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 100;
+}
+
+.menu-bar ul li {
+    position: relative; /* Ensures submenu positions relative to the "Home" item */
+    min-width: 120px;
+    text-align: center;
+    padding: 10px 20px;
+}
+.menu-bar ul li a:hover {
+    background: rgb(23, 109, 105);
+    border-radius: 50px;
+    color: rgb(255, 239, 9);
+    font-size: 25px;
+    list-style: none;
+    color: rgb(34, 31, 31);
+    padding: 10px 20px;
+    margin: 0px 5px;
+}
+
+.menu-bar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+}
+
+.menu-bar ul li:hover, .active {
+    background: rgb(23, 109, 105);
+    border-radius: 50px;
+    color: rgb(255, 239, 9);
+    font-size: 25px;
+    list-style: none;
+    color: rgb(34, 31, 31);
+    padding: 10px 20px;
+    margin: 0px 5px;
+}
+
+
+.menu-bar .fa {
+    font-size: 20px;
+    color: goldenrod;
+    margin-right: 5px;
+}
+
+.sub-menu-1 {
+    display: none;
+    position: absolute;
+    background: rgb(8, 223, 252);
+    padding: 10px;
+    border-radius: 5px;
+    top: 100%; /* Moves submenu directly below "Home" */
+    left: 0;
+    width: max-content;
+    z-index: 100; /* Keeps submenu above other elements */
+}
+
+.menu-bar ul li:hover .sub-menu-1 {
+    display: block;
+}
+.menu-bar ul li:hover .sub-menu-1 ul {
+    margin: 10px 0px;
+    padding: 0px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul li {
+    width: 150px;
+    padding: 5px 10px;
+    text-align: left;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgb(8, 223, 252);
+    padding: 0px;
+    text-align: center;
+    color: rgb(255, 239, 9);
+    font-size: 13px;
+    width: 100%;
+    border-radius: 8px;
+}
